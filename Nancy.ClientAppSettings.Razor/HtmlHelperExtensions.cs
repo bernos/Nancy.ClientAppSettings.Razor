@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using Nancy.ViewEngines.Razor;
@@ -36,6 +37,18 @@ namespace Nancy.ClientAppSettings.Razor
             }
 
             return new NonEncodedHtmlString(js);
+        }
+
+        /// <summary>
+        /// Provides access to app settings from razor views
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="helpers"></param>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        public static string AppSetting<T>(this HtmlHelpers<T> helpers, string key)
+        {
+            return ConfigurationManager.AppSettings[key];
         }
     }
 }

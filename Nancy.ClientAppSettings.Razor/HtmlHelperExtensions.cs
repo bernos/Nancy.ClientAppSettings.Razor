@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using Nancy.ClientAppSettings;
+﻿using System.Configuration;
 using Nancy.ViewEngines.Razor;
 
-namespace Nancy.ViewEngines.Razor
+namespace Nancy.ClientAppSettings
 {
     public static class HtmlHelperExtensions
     {
@@ -16,7 +11,7 @@ namespace Nancy.ViewEngines.Razor
         /// <typeparam name="T"></typeparam>
         /// <param name="helpers"></param>
         /// <returns></returns>
-        public static ClientAppSettings.ClientAppSettings ClientAppSettings<T>(this HtmlHelpers<T> helpers)
+        public static ClientAppSettings ClientAppSettings<T>(this HtmlHelpers<T> helpers)
         {
             return helpers.RenderContext.Context.GetClientAppSettings();
         }

@@ -6,9 +6,10 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <projectUrl>https://bitbucket.org/bernos/nancy.clientappsettings.razor</projectUrl>
+    <projectUrl>https://github.com/bernos/Nancy.ClientAppSettings.Razor</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
+    <releaseNotes>Updated dependencies to Nancy 0.23.0.0. Updated project url to new github repo address.</releaseNotes>
     <copyright>Copyright 2014</copyright>
     <tags>Nancyfx</tags>
   </metadata>
